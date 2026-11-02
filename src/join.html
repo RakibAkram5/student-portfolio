@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a Club — Campus Clubs Hub</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Campus Clubs Hub</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Join a Club</h1>
+      <p>Fill in the form below and we will connect you with the club of your choice.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Student Club Registration</h2>
+        <p>All fields marked with <span class="required-mark">*</span> are required.</p>
+      </div>
+
+      <form class="form" action="#" method="post">
+        <div class="form-group">
+          <label for="full-name">Full Name <span class="required-mark">*</span></label>
+          <input type="text" id="full-name" name="full-name" placeholder="e.g. Alex Johnson"
+                 required minlength="2" maxlength="80" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Student Email <span class="required-mark">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@campus.edu"
+                 required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="student-id">Student ID <span class="required-mark">*</span></label>
+          <input type="text" id="student-id" name="student-id" placeholder="e.g. S1234567"
+                 required pattern="[A-Za-z0-9]{6,12}"
+                 title="6 to 12 letters or numbers">
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year of Study <span class="required-mark">*</span></label>
+          <select id="year" name="year" required>
+            <option value="" selected disabled>Select your year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+            <option value="5">5th Year / Graduate</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="club">Preferred Club <span class="required-mark">*</span></label>
+          <select id="club" name="club" required>
+            <option value="" selected disabled>Choose a club</option>
+            <option value="code-coffee">Code &amp; Coffee</option>
+            <option value="drama">Drama Society</option>
+            <option value="sports">Intramural Sports</option>
+            <option value="photo">Photo Collective</option>
+            <option value="green">Green Campus</option>
+            <option value="music">Music Circle</option>
+            <option value="debate">Debate &amp; Public Speaking</option>
+            <option value="volunteer">Volunteer Network</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. +1 555 123 4567"
+                 pattern="[+0-9()\s-]{7,20}" title="7 to 20 digits and phone symbols"
+                 autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Relevant Experience (optional)</label>
+          <textarea id="experience" name="experience" rows="4"
+                    placeholder="Tell us about any experience, skills, or interests related to this club."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label for="agree">
+            <input type="checkbox" id="agree" name="agree" required>
+            I confirm that the information provided is accurate and I agree to the club's code of conduct.
+            <span class="required-mark">*</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Registration</button>
+          <button type="reset" class="btn btn-secondary">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="cta-section">
+      <h2>Not sure yet?</h2>
+      <p>Visit the clubs directory to learn more about each organization before applying.</p>
+      <a href="clubs.html" class="btn">Browse Clubs</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Campus Clubs Hub. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
