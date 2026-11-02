@@ -783,3 +783,139 @@ p {
     padding: 36px 18px 22px;
   }
 }
+
+.events-page .page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 104px;
+}
+
+.events-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(circle at center, #000 15%, transparent 72%);
+  mask-image: radial-gradient(circle at center, #000 15%, transparent 72%);
+  pointer-events: none;
+}
+
+.events-page .page-hero h1,
+.events-page .page-hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.events-page .page-hero h1::after {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 4px;
+  margin: 22px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+}
+
+.events-page .card-grid {
+  gap: 30px;
+}
+
+.events-page .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.events-page .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.events-page .card:hover::after,
+.events-page .card:focus-within::after {
+  transform: scaleX(1);
+}
+
+.events-page .card:focus-within {
+  border-color: var(--gold-soft);
+  box-shadow: var(--shadow);
+}
+
+.events-page .card-icon {
+  background: linear-gradient(135deg, var(--gold-soft), #f7f0d8);
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.25);
+}
+
+.events-page .card-meta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  color: var(--navy);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.events-page .card .btn {
+  align-self: stretch;
+  margin-top: auto;
+}
+
+.events-page .cta-section {
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+@media (max-width: 900px) {
+  .events-page .page-hero {
+    padding-bottom: 84px;
+  }
+
+  .events-page .card-grid {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-page .page-hero {
+    padding-bottom: 64px;
+  }
+
+  .events-page .page-hero h1::after {
+    width: 64px;
+    margin-top: 16px;
+  }
+
+  .events-page .card {
+    padding: 24px 20px;
+  }
+
+  .events-page .card-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+  }
+
+  .events-page .card-meta {
+    font-size: 0.74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .events-page .card::after {
+    transition: none;
+  }
+}
